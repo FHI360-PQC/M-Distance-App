@@ -462,7 +462,8 @@ server <- function(input, output, session) {
     
     #delete id column and use as rownames
     id <- df$id
-    df <- df %>% select(-id)
+    #df <- df %>% select(-id)
+    df <- df[colnames(df) != "id"]
     df <- as.data.frame(df)
     rownames(df) <- id
     
