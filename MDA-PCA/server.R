@@ -61,7 +61,7 @@ server <- function(input, output, session) {
     }
     
     if(input$logtrans == TRUE) {
-      df <- log(1/df)
+      df <- log10(1/df)
     }
     
     df
@@ -264,7 +264,7 @@ server <- function(input, output, session) {
     }
     
     if(input$logtrans2 == TRUE) {
-      df <- log(1/df)
+      df <- log10(1/df)
     }
     
     df
